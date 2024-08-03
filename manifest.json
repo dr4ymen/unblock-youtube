@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube to Piped",
+  "version": "1.0",
+  "description": "Заменяет www.youtube.com на piped.video при открытии видеоролика на YouTube",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "activeTab",
+    "tabs",
+    "*://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
